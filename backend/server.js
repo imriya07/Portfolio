@@ -11,7 +11,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "portfolio-frontend-kappa-mocha.vercel.app",
     credentials: true,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   })
@@ -29,9 +29,11 @@ const userRoutes = require("./routes/userRoutes");
 app.use("/api/users", userRoutes);
 
 const PORT = process.env.PORT || 8000;
+if (process.env.NODE_ENV !== "production") {
   app.listen(PORT, () => {
     console.log(`server running ${PORT}`);
   });
+}
 
 
 module.exports = app;

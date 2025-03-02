@@ -47,3 +47,4 @@ cypress/videos/
 *.bak
 *.swp
 *.swo
+.vercel

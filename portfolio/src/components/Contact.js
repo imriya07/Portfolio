@@ -27,7 +27,7 @@ export const Contact = () => {
     e.preventDefault();
     setButtonText("Sending...");
   
-    let response = await fetch("http://localhost:5000/api/users/signup", {
+    let response = await fetch("portfolio-backend-lilac-beta.vercel.app/api/users/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
